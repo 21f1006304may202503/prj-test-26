@@ -34,8 +34,7 @@ jobs:
           pip install -r requirements.txt
           python train/train.py
           pytest test/test.py -v 2>&1 > test_output.txt
-          date +%s > date_file
-          cat date_file >> test_output.txt
+          cat test_output.txt
           docker build -t iris_api_w6_final .
           docker tag iris_api_w6_final us-central1-docker.pkg.dev/prj-test-26/w6-repo/iris_api_w6_final:latest
           docker push us-central1-docker.pkg.dev/prj-test-26/w6-repo/iris_api_w6_final:latest
