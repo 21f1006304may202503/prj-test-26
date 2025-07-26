@@ -25,7 +25,7 @@ X_test = test[['sepal_length','sepal_width','petal_length','petal_width']]
 y_test = test.species
 
 params = {
-  "max_depth":4,
+  "max_depth":3
   "random_state":1
 }
 
